@@ -12,7 +12,7 @@ def qq_download_by_vid(vid, title, output_dir='.', merge=True, info_only=False):
     video_json = json.loads(match1(info, r'QZOutputJson=(.*)')[:-1])
     parts_vid = video_json['vl']['vi'][0]['vid']
     parts_ti = video_json['vl']['vi'][0]['ti']
-    parts_prefix = video_json['vl']['vi'][0]['ul']['ui'][0]['url']
+    parts_prefix = 'http://vlive.qqvideo.tc.qq.com/'
     parts_formats = video_json['fl']['fi']
     if parts_prefix.endswith('/'):
         parts_prefix = parts_prefix[:-1]
